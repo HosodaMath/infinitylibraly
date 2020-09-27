@@ -1,4 +1,5 @@
 float Origin = 0;
+int starMax = 40;
 void setup() {
     size(1920, 1080);
     
@@ -37,5 +38,15 @@ void setupStar() {
     float[] radiusData;
     color[] colorData;
 
-    color[] tmpColor;
+    color[] tmpColor = new color[4];
+    /*
+    tmpColor = [color(255, 100, 100), color(255, 255, 100), 
+        color(100, 255,100),color(100, 255, 255)];*/
+    for(int count = 0; count < starMax; count++){
+        locationData[count] = new Vector2(random(0, width), random(0, height));
+        velocityData[count] = new Vector2(1, 0);
+        
+    }
 }
+
+
