@@ -33,10 +33,10 @@ void createSpace(){
 }
 
 void setupStar() {
-    float[] locationData;
-    float[] velocityData;
-    float[] radiusData;
-    color[] colorData;
+    Vector2[] locationData = new Vector2[starMax];
+    Vector2[] velocityData = new Vector2[starMax];
+    float[] radiusData = new float[starMax];
+    color[] colorData = new color[starMax];
 
     color[] tmpColor = new color[4];
     /*
