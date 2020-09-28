@@ -2,12 +2,14 @@ float Origin;
 int starMax = 40;
 createStar[] star = new createStar[starMax];
 Unim1D unim1d;
+PImage img;
 void setup() {
     size(1920, 1080);
     frameRate(60);
-
+    img = loadImage("assets/BuuterFly.png");
     Origin = 0;
     setupStar();
+    setupUnim();
     
 }
 
@@ -17,6 +19,7 @@ void draw() {
     
     createSpace();
     renderStarFIeld();
+    renderUnim();
 }
 
 void backPaints(color backColor){
@@ -41,11 +44,19 @@ void createSpace(){
 
 void setupUnim(){
     float initX = 0.0; //座標xの初期値
-    float initY = 0.0; //座標xの初期値
+    //float initY = 0.0; //座標xの初期値
     float initVX = 2.0; //速度xの初期値
-    float initVY = 5.0; //速度yの初期値
+    //float initVY = 5.0; //速度yの初期値
     float deltaTime = 0.05; //経過時間の値
     float totalTime = 4.0; //総合時間
+
+    unim1d = new Unim1D(initX, initVX, deltaTime, totalTime);
+
+}
+
+void renderUnim(){
+    unim1d.stepButterFly();
+    unim1d.drawButterfly(img);
 }
 
 void setupStar() {
