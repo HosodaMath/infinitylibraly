@@ -15,6 +15,7 @@ void draw() {
     backPaints(backColor);
     
     createSpace();
+    renderStarFIeld();
 }
 
 void backPaints(color backColor){
@@ -56,6 +57,13 @@ void setupStar() {
 
     for(int count = 0; count < starMax; count++){
         star[count] = new createStar(locationData[count], velocityData[count], radiusData[count], colorData[count]);
+    }
+}
+
+void renderStarFIeld(){
+    for(int count = 0; count < starMax; count++){
+        star[count].stepStar();
+        star[count].drawStar();
     }
 }
 
