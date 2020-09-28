@@ -6,6 +6,7 @@ PImage img;
 void setup() {
     size(1920, 1080);
     frameRate(60);
+    noCursor();
     img = loadImage("assets/BuuterFly.png");
     Origin = 0;
     setupStar();
@@ -20,6 +21,7 @@ void draw() {
     createSpace();
     renderStarFIeld();
     renderUnim();
+    
 }
 
 void backPaints(color backColor){
