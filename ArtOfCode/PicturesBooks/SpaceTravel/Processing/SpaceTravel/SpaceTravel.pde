@@ -1,11 +1,12 @@
 float Origin;
 int starMax = 40;
-Vector2[] star = new Vector2[starMax];
+createStar[] star = new createStar[starMax];
 void setup() {
     size(1920, 1080);
     frameRate(60);
 
     Origin = 0;
+    setupStar();
     
 }
 
@@ -54,7 +55,7 @@ void setupStar() {
     }
 
     for(int count = 0; count < starMax; count++){
-        
+        star[count] = new createStar(locationData[count], velocityData[count], radiusData[count], colorData[count]);
     }
 }
 
