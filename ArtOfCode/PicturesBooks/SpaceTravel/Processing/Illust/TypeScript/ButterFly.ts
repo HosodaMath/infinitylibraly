@@ -133,7 +133,7 @@ const Max : number = 1;
 let setup = () => {
     for(let count = 0; count < Max; count++){
         buttetFly[count] = new ButterFly(
-            Math.random() * width, Math.random() * height , 
+            width2, height2 , 
             "#ffff00", "#00ffff"
         );
     }

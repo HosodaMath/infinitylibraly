@@ -1,11 +1,11 @@
 public class Unim1D {
-    float initX = 0;
-    float initVX = 0;
-    float deltaTime = 0;
-    float totalTime = 0;
-    float steps = 0;
-    Vector2 location= new Vector2(0, 0);
-    Vector2 velocity = new Vector2(0, 0);
+   private float initX = 0;
+   private float initVX = 0;
+   private float deltaTime = 0;
+   private float totalTime = 0;
+   private float steps = 0;
+   private Vector2 location= new Vector2(0, 0);
+   private Vector2 velocity = new Vector2(0, 0);
     public Unim1D(float initX, float initVX, float deltaTime, float totalTime){
         this.initX = initX;
         this.initVX = initVX;

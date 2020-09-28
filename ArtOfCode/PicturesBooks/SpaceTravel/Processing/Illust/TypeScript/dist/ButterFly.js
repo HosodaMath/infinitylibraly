@@ -111,7 +111,7 @@ let buttetFly = [];
 const Max = 1;
 let setup = () => {
     for (let count = 0; count < Max; count++) {
-        buttetFly[count] = new ButterFly(Math.random() * width, Math.random() * height, "#ffff00", "#00ffff");
+        buttetFly[count] = new ButterFly(width2, height2, "#ffff00", "#00ffff");
     }
 };
 setup();
